@@ -1,0 +1,17 @@
+---
+# tasks file for enalean.fusioninventory-agent
+#
+
+- name: Install fusioninventory-agent for Debian-like distros
+  apt: name="{{fusioninventory_deb_pkg}}" state=present 
+  when: ansible_os_family == 'Debian'
+  notify: FusionInventory agent first execution
+
+- name: Install fusioninventory-agent for RHEL-like distros
+  yum: name="{{fusioninventory_rhel_pkg}}" state=present
+  when: ansible_os_family == 'RedHat'
+  notify: FusionInventory agent first execution
+
+- name: Deploy agent configuration
+  template: src="agent.cfg.{{ansible_os_family}}.j2" dest="{{fusioninventory_conf_dir}}/agent.cfg" owner=root group=root mode=0644
+  

@@ -1,0 +1,6 @@
+---
+# handlers file for enalean.fusioninventory-agent
+#
+
+- name: FusionInventory agent first execution
+  command: /usr/bin/fusioninventory-agent
