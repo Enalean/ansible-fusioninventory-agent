@@ -25,7 +25,7 @@ Example Playbook
     - hosts: all
       pre_tasks:
         - name: Deploy your self-signed cert
-        - copy: src=mycert.pem dest="{{fusioninventory_cert}}"
+          copy: src=mycert.pem dest="{{fusioninventory_cert}}"
       roles:
         - role: enalean.fusioninventory-agent
       vars:

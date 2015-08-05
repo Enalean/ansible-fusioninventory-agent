@@ -22,5 +22,8 @@ galaxy_info:
     versions:
     - jessie
     - wheezy
+  categories:
+    - monitoring
+    - system
 dependencies: []
   
