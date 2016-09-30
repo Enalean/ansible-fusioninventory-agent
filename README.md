@@ -29,8 +29,9 @@ Example Playbook
       roles:
         - role: enalean.fusioninventory-agent
       vars:
-        - fusioninventory_server: https://glpi.example.com/plugins/fusioninventory/
-        - fusioninventory_cert: /etc/ssl/mycert.pem
+        fusioninventory:
+          - fusioninventory_server: https://glpi.example.com/plugins/fusioninventory/
+          - fusioninventory_cert: /etc/ssl/mycert.pem
 
 License
 -------
