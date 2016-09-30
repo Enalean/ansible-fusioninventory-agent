@@ -1,11 +1,12 @@
 ---
+fusioninventory: []
 # defaults file for enalean.fusioninventory-agent
 #
 
 # The server which we send informations
 fusioninventory_server: ""
 
-# A path for an ssl cert file 
+# A path for an ssl cert file
 fusioninventory_cert: ""
 
 # Package to install
